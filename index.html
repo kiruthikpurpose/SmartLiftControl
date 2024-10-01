@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Elevator Control System Simulation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="controls-panel">
+            <h2>Lift Monitoring:</h2>
+            <div class="lift-status">
+                <p>Current Weight: <span id="weight">0</span> kg</p>
+                <p>People in Lift: <span id="people">0</span></p>
+            </div>
+            <input type="number" id="personWeight" placeholder="Enter weight (kg)" min="1" max="120" />
+            <button class="add-button" onclick="addPerson()">Add Person</button>
+            <input type="number" id="removeWeight" placeholder="Remove weight (kg)" min="1" max="120" />
+            <button class="remove-button" onclick="removePerson()">Remove Person</button>
+            <h3>Internal Controls:</h3>
+            <div class="internal-controls">
+                <button class="floor-button" onclick="selectFloor(1)">1</button>
+                <button class="floor-button" onclick="selectFloor(2)">2</button>
+                <button class="floor-button" onclick="selectFloor(3)">3</button>
+                <button class="floor-button" onclick="selectFloor(4)">4</button>
+                <button class="floor-button" onclick="selectFloor(5)">5</button>
+            </div>
+            <div id="alert" class="alert"></div>
+        </div>
+
+        <div class="elevator">
+            <div class="lift" id="lift"></div>
+        </div>
+
+        <div class="external-panel">
+            <h2>External Controls</h2>
+            <div class="external-controls">
+                <button class="external-button" onclick="callElevator(1)">1 Up</button>
+                <button class="external-button" onclick="callElevator(2)">2 Up</button>
+                <button class="external-button" onclick="callElevator(3)">3 Up</button>
+                <button class="external-button" onclick="callElevator(4)">4 Up</button>
+                <button class="external-button" onclick="callElevator(5)">5 Up</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
